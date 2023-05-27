@@ -6,12 +6,10 @@ class Solution {
 
         for(int i = 0; (i < word1.length() || i < word2.length()); i++){
             if(word1.length() > i){
-                str[j] = word1.charAt(i);
-                j++;
+                str[j++] = word1.charAt(i);
             }
             if(word2.length() > i){
-                str[j] = word2.charAt(i);
-                j++;
+                str[j++] = word2.charAt(i);
             }
         }
 
