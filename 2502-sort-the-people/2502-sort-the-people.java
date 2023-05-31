@@ -9,16 +9,12 @@ class Solution {
 
         Arrays.sort(heights);
         String[] sorted = new String[names.length];
-        for(int i = 0; i < names.length; i++){
-            System.out.println(map.get(heights[i]));
-        }
 
         int j = 0;
         for(int i = names.length-1; i >= 0; i--){
             sorted[j++] = map.get(heights[i]);
         }
 
-        System.out.println(map);
         return sorted;
         // for(int i = 0; i < names.length -1; i++){
         //     for(int j = i+1; j < names.length; j++){
