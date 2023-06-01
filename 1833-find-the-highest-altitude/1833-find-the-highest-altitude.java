@@ -12,7 +12,7 @@ class Solution {
                 max = arr[i];
             }
         }
-        System.out.println(Arrays.toString(arr));
+        
         return max;
     }
 }
