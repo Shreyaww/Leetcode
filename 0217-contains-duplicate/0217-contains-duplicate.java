@@ -6,7 +6,6 @@ class Solution {
             map.put(nums[i], map.getOrDefault(nums[i], 0)+1);
             
         }
-        System.out.println(map);
         for(int i = 0; i < nums.length; i++){
             if(map.getOrDefault(nums[i], 0) > 1){
                 return true;
