@@ -8,10 +8,12 @@ class Solution {
             }
             else if(command.charAt(i) == '(' && command.charAt(i+1) == ')'){
                 str.append('o');
+                i++;
             }
             else if(command.charAt(i) == 'a' && command.charAt(i+1) == 'l'){
                 str.append('a');
                 str.append('l');
+                i+=2;
             }
         }
         return str.toString();
