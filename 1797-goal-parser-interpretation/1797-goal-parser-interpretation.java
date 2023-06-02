@@ -15,14 +15,5 @@ class Solution {
             }
         }
         return str.toString();
-
-        // for(int i = 0; i < command.length(); i++){
-        //     if(str.charAt(i) == '(' && str.charAt(i+1) == ')'){
-        //         str = str.replaceAll("\\(&\\)", "o"); 
-        //     }
-        // }
-        // str = str.replaceAll("\\(|\\)", "");
-        // // str = str.split("");
-        //return str;
     }
 }
