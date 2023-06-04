@@ -9,17 +9,15 @@ class Solution {
         int max = 0;
         int key = -1;
         for(Map.Entry<Integer, Integer> maps : map.entrySet()){
-            int val = maps.getValue(); //1
-            int key1 = maps.getKey(); //4
-
+            int val = maps.getValue(); 
+            int key1 = maps.getKey(); 
+            
             if(val > max){
-                key = key1; //3
-                max = val;  //2
+                key = key1; 
+                max = val;  
             }
-            System.out.println(key + " " + max);
         }
-        
-        System.out.println(map);
+    
         return key;
     }
 }
