@@ -11,7 +11,7 @@ class Solution {
             arr[i+1] = -k;
             k--;
         }
-        Arrays.sort(arr);
+       // Arrays.sort(arr);
         return arr;
     }
 }
