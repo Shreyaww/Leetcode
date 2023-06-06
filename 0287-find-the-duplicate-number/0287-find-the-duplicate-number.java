@@ -5,6 +5,9 @@ class Solution {
             int correct = nums[i] - 1;
 
             if(nums[i] != nums[correct]){
+                if(nums[i] == nums[correct]){
+                    return correct;
+                }
                 swap(nums, i, correct);
             }
             else{
@@ -12,13 +15,13 @@ class Solution {
             }
         }
 
-        for(int j = 0; j < nums.length; j++){
-            if(nums[j] != j+1){
-                return nums[j];
-            }
-        }
+        // for(int j = 0; j < nums.length; j++){
+        //     if(nums[j] != j+1){
+        //         return nums[j];
+        //     }
+        // }
         
-        return 0;
+        return nums[nums.length-1];
     }
 
     public void swap(int[] nums, int i, int correct){
