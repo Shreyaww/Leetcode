@@ -1,9 +1,7 @@
 class Solution {
     public int missingNumber(int[] nums) {
         int[] arr = new int[nums.length+1];
-        for(int i = 0; i < arr.length-1; i++){
-            arr[i] = nums[i];
-        }
+        System.arraycopy(nums, 0, arr, 0, arr.length-1);
 
         int i = 0;
         while(i < arr.length){
