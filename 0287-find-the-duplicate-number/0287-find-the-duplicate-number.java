@@ -17,7 +17,7 @@ class Solution {
                 return nums[j];
             }
         }
-        System.out.println(Arrays.toString(nums));
+        
         return 0;
     }
 
