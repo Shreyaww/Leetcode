@@ -1,11 +1,7 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        int[] arr = new int[nums.length+1];
-        System.arraycopy(nums, 0, arr, 0, arr.length-1);
-
         int i = 0;
         while(i < nums.length){
-            //int correct = arr[i];
             if(nums[i] < nums.length && nums[i] != nums[nums[i]]){
                 swap(nums, i, nums[i]);
             }
@@ -19,14 +15,6 @@ class Solution {
                 return j;
             }
         }
-
-        System.out.println(Arrays.toString(nums));
-    
-        // for(int j = 0; j < arr.length; j++){
-        //     if(arr[j] == 0 && j != 0){
-        //         return j;
-        //     }
-        // }
         
         return nums.length;
        // return search(nums);
