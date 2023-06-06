@@ -5,9 +5,6 @@ class Solution {
             int correct = nums[i] - 1;
 
             if(nums[i] != nums[correct]){
-                // if(nums[i] == nums[correct]){
-                //     return correct;
-                // }
                 swap(nums, i, correct);
             }
             else{
