@@ -5,7 +5,8 @@ class Solution {
         for(int i = 0; i < grid.length; i++){
             for(int j = 0; j < grid[0].length; j++){
                 if(grid[i][j] < 0){
-                    count += 1;
+                    count += grid[0].length - j;
+                    break;
                 }
             }
         }
