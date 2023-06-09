@@ -17,5 +17,6 @@ class Solution {
             }
         }
         return letters[low];
+      //  return letters[low%letters.length];
     }
 }
