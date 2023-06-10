@@ -12,7 +12,7 @@ class Solution {
             }
         }
         address = str.toString();
-        System.out.println(str);
+        
         return address;
     }
 }
