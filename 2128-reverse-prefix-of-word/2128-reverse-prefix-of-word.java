@@ -9,15 +9,13 @@ class Solution {
                 break;
             }
         }
-        System.out.println(count);
+        
         for(int i = count; i >= 0; i--){
             str += word.charAt(i);
         }
         for(int i = count+1; i < word.length(); i++){
             str += word.charAt(i);
         }
-
-
         return str;
     }
 }
