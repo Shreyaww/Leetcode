@@ -4,13 +4,16 @@ class Solution {
         String s1 = "";
         String s2 = "";
 
-        for(int i = 0; i < s.length()/2; i++){
-            s1 += s.charAt(i);
+        for(int i = 0; i < s.length(); i++){
+            if(i < s.length()/2)
+                s1 += s.charAt(i);
+            else    
+                s2 += s.charAt(i);
         }
 
-        for(int i = s.length()/2; i < s.length(); i++){
-            s2 += s.charAt(i);
-        }
+        // for(int i = s.length()/2; i < s.length(); i++){
+        //     s2 += s.charAt(i);
+        // }
         int countA = 0;
         int countB = 0;
 
