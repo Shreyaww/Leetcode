@@ -26,9 +26,6 @@ class Solution {
             }
         }
 
-        System.out.println(s1);
-        System.out.println(s2);
-
         if(countA == countB){
             return true;
         }
