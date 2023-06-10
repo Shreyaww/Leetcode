@@ -11,11 +11,7 @@ class Solution {
                 s2 += s.charAt(i);
         }
 
-        // for(int i = s.length()/2; i < s.length(); i++){
-        //     s2 += s.charAt(i);
-        // }
-        int countA = 0;
-        int countB = 0;
+        int countA = 0, countB = 0;
 
         for(int i = 0; i < s1.length(); i++){
             if(s1.charAt(i) == 'a' || s1.charAt(i) == 'e' || s1.charAt(i) == 'i' || s1.charAt(i) == 'o' || s1.charAt(i) == 'u'){
