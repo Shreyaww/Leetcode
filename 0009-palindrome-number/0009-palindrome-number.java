@@ -10,7 +10,7 @@ class Solution {
             reverse = reverse*10 + remainder;
             temp = temp/10;
         }
-        System.out.println(reverse);
+        //System.out.println(reverse);
         if(reverse == x){
             bool = true;
         }
