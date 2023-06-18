@@ -19,18 +19,14 @@ class Solution {
             int temp = x;
 
             while(temp!=0){
-                remainder = temp%10;
-                reverse = reverse*10 + remainder;
+             //   remainder = temp%10;
+                reverse = reverse*10 + temp%10;
                 temp = temp/10;
             }
-        //System.out.println(reverse);
+
             if(reverse == x){
                 return true;
             }
-
-            // if(x < 0 && reverse < 0){
-            //     return false;
-            // }
         }
         return false;
     }
