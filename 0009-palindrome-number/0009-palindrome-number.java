@@ -15,11 +15,9 @@ class Solution {
         }
         else{
             int reverse = 0;
-            int remainder = 0;
             int temp = x;
 
             while(temp!=0){
-             //   remainder = temp%10;
                 reverse = reverse*10 + temp%10;
                 temp = temp/10;
             }
