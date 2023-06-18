@@ -16,7 +16,6 @@ class Solution {
         else{
             int reverse = 0;
             int remainder = 0;
-            boolean bool = false;
             int temp = x;
 
             while(temp!=0){
@@ -26,14 +25,13 @@ class Solution {
             }
         //System.out.println(reverse);
             if(reverse == x){
-                bool = true;
+                return true;
             }
 
             if(x < 0 && reverse < 0){
-                bool = false;
+                return false;
             }
-
-            return bool;
         }
+        return false;
     }
 }
