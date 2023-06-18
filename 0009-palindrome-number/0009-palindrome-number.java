@@ -28,9 +28,9 @@ class Solution {
                 return true;
             }
 
-            if(x < 0 && reverse < 0){
-                return false;
-            }
+            // if(x < 0 && reverse < 0){
+            //     return false;
+            // }
         }
         return false;
     }
