@@ -9,8 +9,7 @@ class Solution {
         
         long temp = 0;
         while(count > 0){
-            temp *= 10;
-            temp = temp + x%10;
+            temp = temp*10 + x%10;
             
             x /= 10;
             count--;
