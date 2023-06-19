@@ -16,17 +16,10 @@ class Solution {
             count--;
         }
         
-        System.out.println(s);
         if(temp > Integer.MAX_VALUE || temp < Integer.MIN_VALUE){
             return 0;
         }
         return (int)temp;
     }
-
-    // public void swap(String s, char a, char b){
-    //     char temp = a;
-    //     a = b;
-    //     b = a;
-    // }
 
 }
