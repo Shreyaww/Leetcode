@@ -17,8 +17,8 @@ class Solution {
         // }
         // return nums[i];
         int unique = 0;
-        for(int i = 0; i < nums.length; i++){
-            unique = unique ^ nums[i];
+        for(int i : nums){
+            unique = unique ^ i;
         }
         return unique;
     }
