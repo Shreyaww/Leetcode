@@ -27,14 +27,7 @@ class Solution {
                     while(start < j && nums[j] == nums[j-1]){
                         j--;
                     }
-                    // List<Integer> ls1 = new ArrayList<>();
-                    // ls1.add(nums[start]);
-                    // ls1.add(nums[j]);
-                    // ls1.add(nums[i]);
-                    // Collections.sort(ls1);
-                    // if(!ls.contains(ls1)){
-                    //     ls.add(ls1);
-                    // }
+                    
                     start++;
                     j--;
                 }
