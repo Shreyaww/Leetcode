@@ -12,9 +12,6 @@ class Solution {
             }
         }
         
-        System.out.println(Arrays.toString(row));
-        System.out.println(Arrays.toString(col));
-
         for(int i = 0; i < matrix.length; i++){
             for(int j = 0; j < matrix[0].length; j++){
                 if(row[i] == 1 || col[j] == 1){
