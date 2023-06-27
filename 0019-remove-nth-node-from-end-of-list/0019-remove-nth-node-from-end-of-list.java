@@ -17,8 +17,7 @@ class Solution {
             count++;
             prev = prev.next;
         }
-        System.out.println(count);
-
+    
         int pos = count - n;
         
         if(pos == 0){
