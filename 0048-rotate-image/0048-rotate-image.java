@@ -16,11 +16,11 @@ class Solution {
 
         while(i < j){
             int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
+            arr[i++] = arr[j];
+            arr[j--] = temp;
 
-            i++;
-            j--;
+            // i++;
+            // j--;
         } 
     }
     public void swap(int i, int j,int[][] matrix){
