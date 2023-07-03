@@ -1,5 +1,7 @@
 class Solution {
     public int[][] merge(int[][] intervals) {
+        //Optimal - 
+        
         Arrays.sort(intervals, new Comparator<int[]>(){
             public int compare(int[] a, int[] b){
                 return a[0]-b[0];
@@ -25,6 +27,9 @@ class Solution {
         }
 
         return arr;
+
+        //Brute Force - 
+
         // Arrays.sort(intervals, new Comparator<int[]>(){
         //     public int compare(int[] a, int[] b){
         //         return a[0] - b[0];
