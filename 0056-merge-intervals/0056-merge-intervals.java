@@ -24,8 +24,6 @@ class Solution {
             }
         }
 
-        System.out.println(ls);
-
         return arr;
         // Arrays.sort(intervals, new Comparator<int[]>(){
         //     public int compare(int[] a, int[] b){
