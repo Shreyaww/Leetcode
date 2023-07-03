@@ -23,8 +23,6 @@ class Solution {
             ls.add(Arrays.asList(start,end));
         }
 
-        System.out.println(ls);
-
         int[][] arr = new int[ls.size()][2];
 
         for(int i = 0; i < ls.size(); i++){
