@@ -1,5 +1,6 @@
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
+        //Better Solution
         int[] arr = new int[m+n];
         int i = 0, j = 0, k = 0;
 
@@ -21,6 +22,7 @@ class Solution {
         for(int a = 0; a < (m+n); a++){
             nums1[a] = arr[a];
         }
+
         // Soln1 : 
         // int k = 0, len1 = nums1.length, len2 = nums2.length;
 
