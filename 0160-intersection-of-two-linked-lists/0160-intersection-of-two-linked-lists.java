@@ -27,14 +27,14 @@ public class Solution {
             if(dummy1 == null){
                 dummy1 = headB;
             }
-            else if(dummy1 != null){
+            else{
                 dummy1 = dummy1.next;
             }
             
             if(dummy2 == null){
                 dummy2 = headA;
             }
-            else if(dummy2 != null){
+            else{
                 dummy2 = dummy2.next;
             }
 
