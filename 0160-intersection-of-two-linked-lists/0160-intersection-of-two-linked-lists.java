@@ -20,15 +20,12 @@ public class Solution {
             countA++;
             dummy1 = dummy1.next;
         }
-        // System.out.println(countA);
-
         while(dummy2 != null){
             countB++;
             dummy2 = dummy2.next;
         }
-        // System.out.println(countB);
+
         int diff = Math.abs(countA - countB);
-        // System.out.println(diff);
         dummy1 = headA;
         dummy2 = headB;
 
@@ -38,7 +35,7 @@ public class Solution {
                 diff--;
             }
         }
-        else if(countB > countA){
+        else{
             while(diff != 0){
                 dummy2 = dummy2.next;
                 diff--;
