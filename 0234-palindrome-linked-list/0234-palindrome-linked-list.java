@@ -17,7 +17,6 @@ class Solution {
             head = head.next;
         }
 
-        System.out.println(ls);
         int i = 0, j = ls.size()-1;
 
         while(i < j){
