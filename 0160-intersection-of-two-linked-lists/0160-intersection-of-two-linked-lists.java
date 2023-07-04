@@ -42,7 +42,7 @@ public class Solution {
             }
         }
         
-        while(dummy1 != null || dummy2 != null){
+        while(dummy1 != null){
             if(dummy1 == dummy2){
                 return dummy1;
             }
