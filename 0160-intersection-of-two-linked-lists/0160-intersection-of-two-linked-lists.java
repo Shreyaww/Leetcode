@@ -11,46 +11,75 @@
  */
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        //Optimal - 
+        //Optimal2 -
+        if(headA == null || headB == null){
+            return null;
+        } 
+        
         ListNode dummy1 = headA;
         ListNode dummy2 = headB;
-        int countA = 0, countB = 0;
 
-        while(dummy1 != null){
-            countA++;
-            dummy1 = dummy1.next;
-        }
-        while(dummy2 != null){
-            countB++;
-            dummy2 = dummy2.next;
-        }
-
-        int diff = Math.abs(countA - countB);
-        dummy1 = headA;
-        dummy2 = headB;
-
-        if(countA > countB){
-            while(diff != 0){
-                dummy1 = dummy1.next;
-                diff--;
-            }
-        }
-        else{
-            while(diff != 0){
-                dummy2 = dummy2.next;
-                diff--;
-            }
-        }
-        
-        while(dummy1 != null){
+        while(dummy1 != null || dummy2 != null){
             if(dummy1 == dummy2){
                 return dummy1;
             }
-            dummy1 = dummy1.next;
-            dummy2 = dummy2.next;
+            
+            if(dummy1 == null){
+                dummy1 = headB;
+            }
+            else if(dummy1 != null){
+                dummy1 = dummy1.next;
+            }
+            
+            if(dummy2 == null){
+                dummy2 = headA;
+            }
+            else if(dummy2 != null){
+                dummy2 = dummy2.next;
+            }
+
         }
-        
         return null;
+        //Optimal1 - 
+        // ListNode dummy1 = headA;
+        // ListNode dummy2 = headB;
+        // int countA = 0, countB = 0;
+
+        // while(dummy1 != null){
+        //     countA++;
+        //     dummy1 = dummy1.next;
+        // }
+        // while(dummy2 != null){
+        //     countB++;
+        //     dummy2 = dummy2.next;
+        // }
+
+        // int diff = Math.abs(countA - countB);
+        // dummy1 = headA;
+        // dummy2 = headB;
+
+        // if(countA > countB){
+        //     while(diff != 0){
+        //         dummy1 = dummy1.next;
+        //         diff--;
+        //     }
+        // }
+        // else{
+        //     while(diff != 0){
+        //         dummy2 = dummy2.next;
+        //         diff--;
+        //     }
+        // }
+        
+        // while(dummy1 != null){
+        //     if(dummy1 == dummy2){
+        //         return dummy1;
+        //     }
+        //     dummy1 = dummy1.next;
+        //     dummy2 = dummy2.next;
+        // }
+        
+        // return null;
 
         //Better - 
         // HashSet<ListNode> ls = new HashSet<>();
