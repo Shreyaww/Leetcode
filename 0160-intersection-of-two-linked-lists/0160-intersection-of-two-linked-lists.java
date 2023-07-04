@@ -11,16 +11,33 @@
  */
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        List<ListNode> ls = new ArrayList<>();
+
         while(headA != null){
-            ListNode node1 = headB;
-            while(node1 != null){
-                if(headA == node1){
-                    return headA;
-                }
-                node1 = node1.next;
-            }
+            ls.add(headA);
             headA = headA.next;
         }
+        while(headB != null){
+            if(!ls.contains(headB)){
+                ls.add(headB);
+            }
+            else{
+                return headB;
+            }
+            headB = headB.next;
+        }
         return null;
+        //Brute Force - 
+        // while(headA != null){
+        //     ListNode node1 = headB;
+        //     while(node1 != null){
+        //         if(headA == node1){
+        //             return headA;
+        //         }
+        //         node1 = node1.next;
+        //     }
+        //     headA = headA.next;
+        // }
+        // return null;
     }
 }
