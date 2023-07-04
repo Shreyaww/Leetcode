@@ -12,23 +12,14 @@
 public class Solution {
     public boolean hasCycle(ListNode node) {
         HashSet<ListNode> set = new HashSet<>();
-     //   ListNode node = head;
 
         while(node != null){
             set.add(node);
             node = node.next;
             if(set.contains(node)){
-                 return true;
+                return true;
             }
         }
-
-        // node = head;
-        // while(node != null){
-        //     if(set.contains(node)){
-        //         return true;
-        //     }
-        //     node = node.next;
-        // }
         return false;
     }
 }
