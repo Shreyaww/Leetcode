@@ -12,10 +12,6 @@
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         //Optimal2 -
-        if(headA == null || headB == null){
-            return null;
-        } 
-        
         ListNode dummy1 = headA;
         ListNode dummy2 = headB;
 
