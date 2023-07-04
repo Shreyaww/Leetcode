@@ -15,11 +15,7 @@ public class Solution {
         ListNode dummy1 = headA;
         ListNode dummy2 = headB;
 
-        while(dummy1 != null || dummy2 != null){
-            if(dummy1 == dummy2){
-                return dummy1;
-            }
-            
+        while(dummy1 != dummy2){
             if(dummy1 == null){
                 dummy1 = headB;
             }
@@ -35,7 +31,7 @@ public class Solution {
             }
 
         }
-        return null;
+        return dummy1;
         //Optimal1 - 
         // ListNode dummy1 = headA;
         // ListNode dummy2 = headB;
