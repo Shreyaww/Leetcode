@@ -18,15 +18,13 @@ public class Solution {
             headA = headA.next;
         }
         while(headB != null){
-            if(!ls.contains(headB)){
-                ls.add(headB);
-            }
-            else{
+            if(ls.contains(headB)){
                 return headB;
             }
             headB = headB.next;
         }
         return null;
+
         //Brute Force - 
         // while(headA != null){
         //     ListNode node1 = headB;
