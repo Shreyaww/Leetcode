@@ -18,47 +18,80 @@ class Solution {
         // return ls;
 
 
-
-        // int flr = nums.length/3;
-        // ArrayList<Integer> ls = new ArrayList<>();
-        
-        // int ele = 0, count = 0;
-
-        // for(int i = 0; i < nums.length; i++){
-        //     if(count > flr){
-        //         ls.add(nums[i]);
-        //     }
-        //     if(count == 0){
-        //         ele = nums[i];
-        //         //count++;
-        //     }
-        //     if(nums[i] == ele){
-        //         count++;
-        //     }
-        //     else if(nums[i] != ele){
-        //         count--;
-        //     }
-        // }
-        // return ls;
-
-        //Using HashMap(Better) - 
-        int size = nums.length;
-        int flr = size/3 + 1;
-
+        //Optimal Solution
+        int flr = nums.length/3;
         ArrayList<Integer> ls = new ArrayList<>();
-        HashMap<Integer, Integer> map = new HashMap<>();
+        
+        int ele1 = 0, ele2 = 0, count1 = 0, count2 = 0;
 
-        for(int i = 0; i < size; i++){
-            map.put(nums[i], map.getOrDefault(nums[i], 0)+1);
-
-            if(map.get(nums[i]) == flr){
-                ls.add(nums[i]);
+        for(int i = 0; i < nums.length; i++){
+            if(count1 == 0 && nums[i] != ele2){
+                ele1 = nums[i];
+                count1++;
             }
-            else if(ls.size() == 2){
-                return ls;
+            else if(count2 == 0 && nums[i] != ele1){
+                ele2 = nums[i];
+                count2++;
+            }
+            else if(ele1 == nums[i]){
+                count1++;
+            }
+            else if(ele2 == nums[i]){
+                count2++;
+            }
+            else{
+                count1--;
+                count2--;
+            }
+
+            if(count1 > flr && !(ls.contains(ele1))){
+                ls.add(ele1);
+            }
+            else if(count2 > flr && !(ls.contains(ele2))){
+                ls.add(ele2);
             }
         }
 
+        flr = flr + 1;
+        count1 = 0;
+        count2 = 0;
+
+        for(int i = 0; i < nums.length; i++){
+            if(ele1 == nums[i]){
+                count1++;
+            }
+
+            if(ele2 == nums[i]){
+                count2++;
+            }
+
+            if(count1 >= flr && !(ls.contains(ele1))){
+                ls.add(ele1);
+            }
+            else if(count2 >= flr && !(ls.contains(ele2))){
+                ls.add(ele2);
+            }
+        }
         return ls;
+
+        //Using HashMap(Better) - 
+        // int size = nums.length;
+        // int flr = size/3 + 1;
+
+        // ArrayList<Integer> ls = new ArrayList<>();
+        // HashMap<Integer, Integer> map = new HashMap<>();
+
+        // for(int i = 0; i < size; i++){
+        //     map.put(nums[i], map.getOrDefault(nums[i], 0)+1);
+
+        //     if(map.get(nums[i]) == flr){
+        //         ls.add(nums[i]);
+        //     }
+        //     else if(ls.size() == 2){
+        //         return ls;
+        //     }
+        // }
+
+        //return ls;
     }
 }
