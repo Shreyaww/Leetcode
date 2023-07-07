@@ -56,9 +56,9 @@ class Solution {
             if(map.get(nums[i]) > flr && !ls.contains(nums[i])){
                 ls.add(nums[i]);
             }
-            else if(ls.size() == 2){
-                return ls;
-            }
+            // else if(ls.size() == 2){
+            //     return ls;
+            // }
         }
 
         return ls;
