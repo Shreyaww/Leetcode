@@ -50,16 +50,23 @@ class Solution {
 
         for(int i = 0; i < size; i++){
             map.put(nums[i], map.getOrDefault(nums[i], 0)+1);
-        }
 
-        for(int i = 0; i < size; i++){
             if(map.get(nums[i]) > flr && !ls.contains(nums[i])){
                 ls.add(nums[i]);
             }
-            // else if(ls.size() == 2){
-            //     return ls;
-            // }
+            else if(ls.size() == 2){
+                return ls;
+            }
         }
+
+        // for(int i = 0; i < size; i++){
+        //     if(map.get(nums[i]) > flr && !ls.contains(nums[i])){
+        //         ls.add(nums[i]);
+        //     }
+        //     else if(ls.size() == 2){
+        //         return ls;
+        //     }
+        // }
 
         return ls;
     }
