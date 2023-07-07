@@ -41,7 +41,7 @@ class Solution {
         // }
         // return ls;
 
-        //Using HashMap - 
+        //Using HashMap(Better) - 
         int size = nums.length;
         int flr = size/3;
 
@@ -55,6 +55,9 @@ class Solution {
         for(int i = 0; i < size; i++){
             if(map.get(nums[i]) > flr && !ls.contains(nums[i])){
                 ls.add(nums[i]);
+            }
+            else if(ls.size() == 2){
+                return ls;
             }
         }
 
