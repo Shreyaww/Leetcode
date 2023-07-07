@@ -1,6 +1,6 @@
 class Solution {
     public int majorityElement(int[] nums) {
-        //Soln3 - 
+        //Soln3 (Brute Force)- 
         int size = nums.length/2;
 
         for(int i = 0; i < nums.length; i++){
@@ -9,10 +9,9 @@ class Solution {
                 if(nums[i] == nums[j] && i!= j){
                     count++;
                 }
-
-                if(count > size){
-                    return nums[i];
-                }
+            }
+            if(count > size){
+                return nums[i];
             }
         }
         
