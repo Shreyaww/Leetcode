@@ -43,7 +43,7 @@ class Solution {
 
         //Using HashMap(Better) - 
         int size = nums.length;
-        int flr = size/3;
+        int flr = size/3 + 1;
 
         ArrayList<Integer> ls = new ArrayList<>();
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -51,7 +51,7 @@ class Solution {
         for(int i = 0; i < size; i++){
             map.put(nums[i], map.getOrDefault(nums[i], 0)+1);
 
-            if(map.get(nums[i]) > flr && !ls.contains(nums[i])){
+            if(map.get(nums[i]) == flr){
                 ls.add(nums[i]);
             }
             else if(ls.size() == 2){
