@@ -14,9 +14,6 @@ class Solution {
             map.get(str).add(strs[i]);
         }
         
-        List<List<String>> ls = new ArrayList<>(map.values());
-
-       // System.out.println(map);
-        return ls;
+        return new ArrayList<>(map.values());
     }
 }
