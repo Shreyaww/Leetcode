@@ -15,7 +15,7 @@ class Solution {
         while(!stk.isEmpty()){
             str.append(stk.pop());
         }
-        System.out.println(str.reverse());
-        return str.toString();
+        
+        return str.reverse().toString();
     }
 }
