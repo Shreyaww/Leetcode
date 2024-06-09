@@ -5,6 +5,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 # Array
 |  |
 | ------- |
+| [0503-next-greater-element-ii](https://github.com/Shreyaww/Leetcode/tree/master/0503-next-greater-element-ii) |
 | [0648-replace-words](https://github.com/Shreyaww/Leetcode/tree/master/0648-replace-words) |
 # Hash Table
 |  |
@@ -18,3 +19,11 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0648-replace-words](https://github.com/Shreyaww/Leetcode/tree/master/0648-replace-words) |
+# Stack
+|  |
+| ------- |
+| [0503-next-greater-element-ii](https://github.com/Shreyaww/Leetcode/tree/master/0503-next-greater-element-ii) |
+# Monotonic Stack
+|  |
+| ------- |
+| [0503-next-greater-element-ii](https://github.com/Shreyaww/Leetcode/tree/master/0503-next-greater-element-ii) |
